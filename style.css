@@ -2525,3 +2525,451 @@ h2 {
   }
 
 }
+/* =========================================================
+   OPPARC — MULTI-PAGE PREMIUM DESIGN
+   Add this BELOW the existing CSS.
+   ========================================================= */
+
+
+/* ================= GLOBAL ================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f5f1e8;
+  color: #171717;
+}
+
+.container {
+  width: min(1180px, 90%);
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+}
+
+h1 em,
+h2 em {
+  font-style: italic;
+  font-weight: 500;
+}
+
+p,
+a,
+button,
+input,
+select,
+textarea {
+  font-family: "DM Sans", Arial, sans-serif;
+}
+
+
+/* ================= NAVIGATION ================= */
+
+.navbar {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 24px 5%;
+  background: #f5f1e8;
+  border-bottom: 1px solid rgba(23, 23, 23, 0.12);
+}
+
+.navbar .logo {
+  color: #171717;
+  text-decoration: none;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 25px;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.navbar .logo sup {
+  font-size: 9px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  position: relative;
+  color: #171717;
+  text-decoration: none;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  transition: opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+  opacity: 0.55;
+}
+
+.nav-links a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -7px;
+  height: 1px;
+  background: #a98a54;
+}
+
+.nav-button {
+  padding: 12px 17px;
+  background: #171717;
+  color: #f5f1e8 !important;
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  transition: transform 0.3s ease,
+              background 0.3s ease;
+}
+
+.nav-button:hover {
+  transform: translateY(-2px);
+  background: #a98a54;
+}
+
+
+/* ================= SHARED SECTIONS ================= */
+
+.section {
+  padding: 110px 0;
+}
+
+.section-number {
+  margin-bottom: 25px;
+  color: #a98a54;
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.section h2,
+.dark-section h2,
+.beige-section h2 {
+  max-width: 850px;
+  margin: 0 0 30px;
+  font-size: clamp(38px, 5vw, 72px);
+  line-height: 0.98;
+}
+
+.section p,
+.beige-section p,
+.dark-section p {
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.large-text {
+  font-family: "Playfair Display", Georgia, serif !important;
+  font-size: clamp(24px, 3vw, 38px) !important;
+  line-height: 1.25 !important;
+}
+
+.two-column {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
+  align-items: start;
+}
+
+.section-heading {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 70px;
+  align-items: end;
+  margin-bottom: 65px;
+}
+
+.section-heading > p {
+  margin: 0;
+}
+
+
+/* ================= HEROES ================= */
+
+.architecture-hero,
+.diagnostic-hero,
+.solutions-hero,
+.architect-hero,
+.proof-hero,
+.lab-hero {
+  padding: 125px 0 120px;
+  background: #f5f1e8;
+}
+
+.architecture-hero h1,
+.diagnostic-hero h1,
+.solutions-hero h1,
+.proof-hero h1,
+.lab-hero h1 {
+  max-width: 950px;
+  margin: 0 0 35px;
+  font-size: clamp(55px, 8vw, 112px);
+  line-height: 0.9;
+}
+
+.hero-description {
+  max-width: 650px;
+  margin: 15px 0;
+  font-size: 17px !important;
+  line-height: 1.7 !important;
+}
+
+
+/* ================= BUTTONS ================= */
+
+.button {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 15px 23px;
+  border: 1px solid transparent;
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  transition: all 0.3s ease;
+}
+
+.button-gold {
+  background: #a98a54;
+  color: #fff;
+}
+
+.button-gold:hover {
+  background: #171717;
+  transform: translateY(-3px);
+}
+
+.button-dark {
+  background: #171717;
+  color: #fff;
+}
+
+.button-dark:hover {
+  background: #a98a54;
+  transform: translateY(-3px);
+}
+
+.final-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+
+/* ================= DARK SECTIONS ================= */
+
+.dark-section {
+  padding: 110px 0;
+  background: #171717;
+  color: #f5f1e8;
+}
+
+.dark-section .section-number {
+  color: #b99a63;
+}
+
+.dark-section h2 {
+  color: #f5f1e8;
+}
+
+.dark-section p {
+  color: rgba(245, 241, 232, 0.78);
+}
+
+
+/* ================= BEIGE ================= */
+
+.beige-section {
+  background: #e8dfcf;
+}
+
+
+/* ================= ARCHITECTURE ================= */
+
+.movement-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  margin-top: 65px;
+  border-top: 1px solid rgba(245, 241, 232, 0.2);
+  border-bottom: 1px solid rgba(245, 241, 232, 0.2);
+}
+
+.movement {
+  min-height: 310px;
+  padding: 35px 25px;
+  border-right: 1px solid rgba(245, 241, 232, 0.2);
+}
+
+.movement:last-child {
+  border-right: 0;
+}
+
+.movement span {
+  color: #b99a63;
+  font-size: 11px;
+}
+
+.movement h3 {
+  margin: 70px 0 20px;
+  font-size: 30px;
+}
+
+.movement p {
+  font-size: 13px;
+}
+
+.pace-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  padding: 65px;
+  background: #171717;
+  color: #f5f1e8;
+}
+
+.pace-box h3 {
+  margin: 20px 0 0;
+  font-size: clamp(38px, 5vw, 65px);
+  line-height: 1.05;
+}
+
+.pace-box p {
+  color: rgba(245, 241, 232, 0.78);
+}
+
+
+/* ================= DIAGNOSTIC ================= */
+
+.diagnostic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  margin-top: 60px;
+  background: rgba(23, 23, 23, 0.15);
+}
+
+.diagnostic-card {
+  min-height: 260px;
+  padding: 35px;
+  background: #e8dfcf;
+  transition: transform 0.3s ease,
+              background 0.3s ease;
+}
+
+.diagnostic-card:hover {
+  transform: translateY(-5px);
+  background: #f5f1e8;
+}
+
+.diagnostic-card span {
+  color: #a98a54;
+  font-size: 11px;
+}
+
+.diagnostic-card h3 {
+  margin: 60px 0 15px;
+  font-size: 29px;
+}
+
+.diagnostic-card p {
+  font-size: 13px;
+}
+
+.diagnostic-form-container {
+  max-width: 850px;
+}
+
+.form-intro {
+  margin-bottom: 60px;
+}
+
+.diagnostic-form {
+  padding: 55px;
+  background: #eee7da;
+  border: 1px solid rgba(23, 23, 23, 0.12);
+}
+
+.form-group {
+  margin-bottom: 28px;
+}
+
+.form-group > label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px;
+  border: 1px solid rgba(23, 23, 23, 0.25);
+  outline: none;
+  background: #f8f5ef;
+  color: #171717;
+  font-size: 14px;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #a98a54;
+}
+
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.radio-group label {
+  font-size: 13px;
+}
+
+.form-divider {
+  margin: 55px 0 35px;
+  padding-top: 35px;
+  border-top: 1px solid rgba(23, 23, 23, 0.15);
+}
+
+.form-divider h3 {
+  font-size: 35px;
+}
+
+.privacy-note {
+  font-size: 11px !important;
+  color: #777;
+}
+
+.form-submit {
+  border: 0;
+  cursor: pointer;
+}
+
+.diagnostic-result {
+  padding: 60px;
+  background: #171717;
+  color: #f5f1e
