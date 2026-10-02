@@ -1188,3 +1188,164 @@ footer {
   }
 
 }
+/* =====================================================
+   OPPARC PREMIUM LOADER
+   ===================================================== */
+
+.opparc-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+
+  background: #171716;
+  color: #f7f4ed;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 1;
+  visibility: visible;
+
+  transition:
+    opacity 0.9s ease,
+    visibility 0.9s ease;
+}
+
+.opparc-loader.hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.loader-inner {
+  width: min(520px, 82%);
+  text-align: center;
+}
+
+.loader-brand {
+  font-family: "Playfair Display", Georgia, serif;
+
+  font-size: clamp(55px, 12vw, 100px);
+
+  letter-spacing: 5px;
+  line-height: 1;
+
+  opacity: 0;
+
+  transform: translateY(20px);
+
+  animation:
+    loaderBrandIn 1.1s ease forwards;
+}
+
+.loader-brand span {
+  font-family: "DM Sans", Arial, sans-serif;
+  font-size: 11px;
+  vertical-align: top;
+  margin-left: 4px;
+}
+
+.loader-name {
+  margin-top: 20px;
+
+  font-family: "DM Sans", Arial, sans-serif;
+
+  font-size: 10px;
+  letter-spacing: 4px;
+  font-weight: 600;
+
+  color: #b49a68;
+
+  opacity: 0;
+
+  animation:
+    loaderNameIn 1s ease .5s forwards;
+}
+
+.loader-line {
+  width: 100%;
+  height: 1px;
+
+  background: rgba(247,244,237,.18);
+
+  margin-top: 45px;
+
+  overflow: hidden;
+}
+
+.loader-line-progress {
+  width: 0%;
+  height: 100%;
+
+  background: #b49a68;
+
+  animation:
+    loaderProgress 2.3s cubic-bezier(.65,0,.35,1) forwards;
+}
+
+
+/* LOADER ANIMATIONS */
+
+@keyframes loaderBrandIn {
+
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+    letter-spacing: 12px;
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    letter-spacing: 5px;
+  }
+
+}
+
+@keyframes loaderNameIn {
+
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+@keyframes loaderProgress {
+
+  0% {
+    width: 0%;
+  }
+
+  100% {
+    width: 100%;
+  }
+
+}
+
+
+/* MOBILE LOADER */
+
+@media (max-width: 600px) {
+
+  .loader-brand {
+    font-size: 55px;
+    letter-spacing: 3px;
+  }
+
+  .loader-name {
+    font-size: 8px;
+    letter-spacing: 3px;
+  }
+
+  .loader-line {
+    margin-top: 35px;
+  }
+
+}
