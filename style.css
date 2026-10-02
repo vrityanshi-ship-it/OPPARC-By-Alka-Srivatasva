@@ -1944,3 +1944,584 @@ svg {
   }
 
 }
+/* =========================================================
+   OPPARC — CLIENT REFERENCE DESIGN UPDATE
+   ========================================================= */
+
+:root {
+  --ivory: #f7f4ed;
+  --cream: #eee7d9;
+  --gold: #b48628;
+  --gold-light: #d5aa57;
+  --black: #111211;
+  --charcoal: #191a18;
+  --grey: #66645f;
+}
+
+
+/* ================= HEADER ================= */
+
+.navbar {
+  height: 72px;
+  padding: 0 5%;
+  background: rgba(250, 248, 243, 0.97);
+  border-bottom: 1px solid rgba(0,0,0,.08);
+  backdrop-filter: blur(12px);
+}
+
+.logo {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 30px;
+  letter-spacing: -1.5px;
+  color: #111;
+}
+
+.logo span {
+  font-family: Arial, sans-serif;
+  font-size: 8px;
+  vertical-align: top;
+  margin-left: 3px;
+}
+
+.nav-links {
+  gap: 28px;
+}
+
+.nav-links a {
+  font-size: 12px;
+  color: #222;
+  transition: color .25s ease;
+}
+
+.nav-links a:hover {
+  color: var(--gold);
+}
+
+.nav-button {
+  background: var(--gold);
+  color: white;
+  padding: 13px 24px;
+  font-size: 12px;
+  border-radius: 2px;
+}
+
+.nav-button:hover {
+  background: #946e20;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+  padding: 0;
+  min-height: 560px;
+  background: var(--ivory);
+}
+
+.hero-grid {
+  min-height: 560px;
+  grid-template-columns: 45% 55%;
+  gap: 0;
+}
+
+.hero-content {
+  padding: 90px 7%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.hero h1 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(48px, 5vw, 76px);
+  line-height: .98;
+  letter-spacing: -3px;
+  margin: 20px 0 28px;
+}
+
+.hero h1 em {
+  color: var(--gold);
+  font-style: normal;
+}
+
+.hero-description {
+  max-width: 560px;
+  font-size: 18px;
+  line-height: 1.55;
+  color: #333;
+}
+
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #777;
+}
+
+
+/* Replace the abstract orbit feeling with a premium visual panel */
+
+.hero-visual {
+  min-height: 560px;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(20,20,19,.15),
+      rgba(20,20,19,.05)
+    ),
+    linear-gradient(
+      135deg,
+      #222,
+      #776346 48%,
+      #d7b476
+    );
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-visual::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    radial-gradient(
+      circle at 70% 35%,
+      rgba(255,255,255,.28),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      transparent 45%,
+      rgba(0,0,0,.35)
+    );
+}
+
+.hero-visual::after {
+  content: "OPPORTUNITY DOESN’T ALWAYS\A FOLLOW A JOB DESCRIPTION.";
+  white-space: pre;
+  position: absolute;
+  right: 8%;
+  top: 16%;
+  max-width: 220px;
+
+  font-family: "DM Sans", sans-serif;
+  font-size: 11px;
+  line-height: 2;
+  letter-spacing: 4px;
+  color: white;
+}
+
+
+/* Hide old orbit on desktop */
+
+.architecture-orbit {
+  opacity: 0;
+}
+
+
+/* ================= GOLD BUTTONS ================= */
+
+.button-dark,
+.button-gold {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: white;
+}
+
+.button-dark:hover,
+.button-gold:hover {
+  background: #946e20;
+}
+
+
+/* ================= STAT STRIP ================= */
+
+.hero + .dark-section {
+  position: relative;
+}
+
+.hero + .dark-section::before {
+  content: "22+ YEARS OF EXPERIENCE     |     500+ PROFESSIONALS GUIDED     |     INDIA • MIDDLE EAST • EUROPE • AFRICA     |     STRATEGIC CAREER & TALENT ADVISOR";
+
+  display: block;
+  padding: 24px 5%;
+
+  background: var(--ivory);
+  color: #222;
+
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 1px;
+  line-height: 2;
+  border-bottom: 1px solid #ddd;
+}
+
+
+/* ================= SECTION HEADINGS ================= */
+
+h2,
+h3,
+.section-title {
+  font-family: "Playfair Display", Georgia, serif;
+}
+
+h2 {
+  letter-spacing: -1.5px;
+}
+
+.section-number {
+  color: var(--gold);
+  letter-spacing: 3px;
+  font-size: 10px;
+}
+
+
+/* ================= CAREER EQUATION ================= */
+
+.equation {
+  background:
+    linear-gradient(135deg, #111311, #20221f);
+  padding: 45px 35px;
+  color: white;
+  border: 1px solid #292b28;
+}
+
+.equation-item {
+  text-align: center;
+  flex: 1;
+}
+
+.equation-item span {
+  color: var(--gold-light);
+}
+
+.equation-item strong {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 20px;
+}
+
+.equation-item small {
+  color: #aaa;
+}
+
+.equation-line {
+  background: var(--gold);
+  opacity: .5;
+}
+
+
+/* ================= DIFFERENCE ================= */
+
+.beige-section {
+  background: var(--cream);
+}
+
+
+/* ================= ARCHITECTURE ================= */
+
+.movement-grid {
+  gap: 0;
+  border: 1px solid #ded8ca;
+}
+
+.movement {
+  background: #faf8f3;
+  min-height: 240px;
+  padding: 32px 28px;
+  border-color: #ded8ca;
+  transition:
+    transform .3s ease,
+    background .3s ease;
+}
+
+.movement:hover {
+  background: #eee5d3;
+  transform: translateY(-5px);
+}
+
+.movement span {
+  color: var(--gold);
+  font-size: 13px;
+}
+
+.movement h3 {
+  font-size: 28px;
+}
+
+.movement p {
+  color: #666;
+}
+
+
+/* ================= PACE ================= */
+
+.pace-box {
+  margin-top: 55px;
+  background: #111312;
+  color: white;
+  border: 1px solid #252724;
+  padding: 50px;
+}
+
+.pace-box h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 44px;
+  line-height: 1.05;
+}
+
+.pace-box .small-label {
+  color: var(--gold-light);
+}
+
+
+/* ================= DIAGNOSTIC ================= */
+
+.diagnostic-section {
+  background:
+    linear-gradient(135deg, #101211, #1d1e1b);
+}
+
+.diagnostic-card {
+  background: #f7f4ed;
+  color: #111;
+  border: 1px solid rgba(255,255,255,.1);
+  box-shadow: 0 25px 70px rgba(0,0,0,.25);
+}
+
+.answers button {
+  background: transparent;
+  border: 1px solid #d5cec0;
+  color: #222;
+}
+
+.answers button:hover,
+.answers button.selected {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: white;
+}
+
+
+/* ================= SOLUTIONS ================= */
+
+.solutions-grid {
+  gap: 12px;
+}
+
+.solution-card {
+  background: #f5f0e7;
+  border: 1px solid #ded7ca;
+  position: relative;
+  overflow: hidden;
+  transition: transform .35s ease;
+}
+
+.solution-card:hover {
+  transform: translateY(-7px);
+}
+
+.solution-card span {
+  color: var(--gold);
+}
+
+.solution-card h3 {
+  font-size: 28px;
+}
+
+.solution-card a {
+  color: #9a701f;
+}
+
+
+/* ================= ORGANISATIONS ================= */
+
+.organization-box {
+  background: #101311;
+  color: white;
+  border: none;
+  margin-top: 30px;
+}
+
+.organization-box .small-label {
+  color: var(--gold-light);
+}
+
+.org-services span {
+  border-color: #44463f;
+  color: #eee;
+}
+
+
+/* ================= ARCHITECT ================= */
+
+.architect-layout {
+  background: #111312;
+  color: white;
+  padding: 0;
+  gap: 0;
+}
+
+.architect-image {
+  min-height: 620px;
+  background:
+    linear-gradient(
+      135deg,
+      #252622,
+      #7c684f
+    );
+}
+
+.architect-content {
+  padding: 70px;
+}
+
+.architect-content h2 {
+  font-size: clamp(45px, 5vw, 70px);
+}
+
+.architect-content .small-label {
+  color: var(--gold-light);
+}
+
+.lens {
+  border-left: 2px solid var(--gold);
+  padding-left: 25px;
+  margin: 40px 0;
+}
+
+
+/* ================= PROOF ================= */
+
+.evidence-grid {
+  gap: 12px;
+}
+
+.evidence {
+  background: #f5f1e9;
+  border: 1px solid #ddd6c8;
+  transition: transform .3s ease;
+}
+
+.evidence:hover {
+  transform: translateY(-5px);
+}
+
+.evidence span {
+  color: var(--gold);
+}
+
+
+/* ================= OPPORTUNITY LAB ================= */
+
+.lab-grid {
+  gap: 12px;
+}
+
+.lab-grid article {
+  background: #191b19;
+  border: 1px solid #33352f;
+  padding: 35px;
+  transition: transform .3s ease;
+}
+
+.lab-grid article:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold);
+}
+
+.lab-grid article span {
+  color: var(--gold-light);
+  letter-spacing: 2px;
+}
+
+.lab-grid article h3 {
+  font-size: 25px;
+}
+
+
+/* ================= FINAL CTA ================= */
+
+.final-cta {
+  background:
+    linear-gradient(135deg, #161816, #29251d);
+  color: white;
+}
+
+.final-cta h2 {
+  font-size: clamp(45px, 6vw, 75px);
+}
+
+.final-cta p {
+  color: var(--gold-light);
+}
+
+
+/* =========================================================
+   MOBILE — KEEP THE LAYOUT YOU ALREADY FIXED
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .navbar {
+    height: 70px;
+    padding: 0 20px;
+  }
+
+  .logo {
+    font-size: 27px;
+  }
+
+  .nav-button {
+    display: none;
+  }
+
+  .hero {
+    padding-top: 70px;
+  }
+
+  .hero-grid {
+    min-height: auto;
+  }
+
+  .hero-content {
+    padding: 65px 20px;
+  }
+
+  .hero h1 {
+    font-size: clamp(40px, 12vw, 54px);
+    letter-spacing: -2px;
+  }
+
+  .hero-description {
+    font-size: 15px;
+  }
+
+  .hero-visual {
+    min-height: 380px;
+  }
+
+  .hero-visual::after {
+    right: 20px;
+    top: 30px;
+    font-size: 9px;
+  }
+
+  .hero + .dark-section::before {
+    padding: 22px 18px;
+    font-size: 9px;
+    line-height: 2.2;
+  }
+
+  .architect-content {
+    padding: 45px 25px;
+  }
+
+  .architect-image {
+    min-height: 430px;
+  }
+
+  .pace-box {
+    padding: 30px 22px;
+  }
+
+}
