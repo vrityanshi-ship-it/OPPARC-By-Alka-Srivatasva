@@ -228,3 +228,22 @@ document
     observer.observe(element);
 
   });
+/* =====================================================
+   OPPARC LOADER
+   ===================================================== */
+
+window.addEventListener("load", () => {
+
+  const loader = document.getElementById("opparcLoader");
+
+  setTimeout(() => {
+
+    loader.classList.add("hide");
+
+    setTimeout(() => {
+      loader.remove();
+    }, 900);
+
+  }, 2500);
+
+});
