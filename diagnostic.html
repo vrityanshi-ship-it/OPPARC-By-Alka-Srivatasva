@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Career Market Diagnostic | OPPARC</title>
+
+  <meta
+    name="description"
+    content="Discover the forces shaping your career-market position with the OPPARC Career Market Diagnostic."
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="navbar">
+
+  <a href="index.html" class="logo">
+    OPPARC<sup>®</sup>
+  </a>
+
+  <nav class="nav-links">
+
+    <a href="index.html">Home</a>
+
+    <a href="architecture.html">Architecture</a>
+
+    <a href="diagnostic.html" class="active">
+      Diagnostic
+    </a>
+
+    <a href="solutions.html">Solutions</a>
+
+    <a href="architect.html">The Architect</a>
+
+    <a href="proof.html">Proof of Impact</a>
+
+    <a href="opportunity-lab.html">Opportunity Lab</a>
+
+  </nav>
+
+  <a href="#diagnostic" class="nav-button">
+    Begin Diagnostic →
+  </a>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="diagnostic-hero">
+
+  <div class="container">
+
+    <p class="section-number">
+      CAREER MARKET DIAGNOSTIC
+    </p>
+
+    <h1>
+      Where do you
+      <em>really</em>
+      stand in the market?
+    </h1>
+
+    <p class="hero-description">
+      Your experience tells one story.
+      The market may be reading another.
+    </p>
+
+    <p class="hero-description">
+      The OPPARC Career Market Diagnostic is designed
+      to identify the forces influencing your current
+      professional position — and the constraints
+      affecting your next move.
+    </p>
+
+    <a href="#diagnostic" class="button button-gold">
+      Begin the Diagnostic ↓
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- ================= INTRO ================= -->
+
+<section class="section">
+
+  <div class="container two-column">
+
+    <div>
+
+      <p class="section-number">
+        WHY DIAGNOSE?
+      </p>
+
+      <h2>
+        Before you change
+        your career, understand
+        your market position.
+      </h2>
+
+    </div>
+
+    <div>
+
+      <p class="large-text">
+        A career move should begin with clarity,
+        not assumption.
+      </p>
+
+      <p>
+        The diagnostic examines how your experience,
+        positioning, visibility, perception and access
+        interact within the career market.
+      </p>
+
+      <p>
+        The objective is not to produce a meaningless
+        score. It is to identify where friction exists
+        and what may be constraining opportunity.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= WHAT IT EXAMINES ================= -->
+
+<section class="beige-section section">
+
+  <div class="container">
+
+    <p class="section-number">
+      THE DIAGNOSTIC LENS
+    </p>
+
+    <h2>
+      Six dimensions.<br>
+      One market position.
+    </h2>
+
+
+    <div class="diagnostic-grid">
+
+      <article class="diagnostic-card">
+
+        <span>01</span>
+
+        <h3>
+          Positioning
+        </h3>
+
+        <p>
+          How clearly is your professional value
+          defined and differentiated?
+        </p>
+
+      </article>
+
+
+      <article class="diagnostic-card">
+
+        <span>02</span>
+
+        <h3>
+          Visibility
+        </h3>
+
+        <p>
+          How visible are you to the people
+          and markets that matter?
+        </p>
+
+      </article>
+
+
+      <article class="diagnostic-card">
+
+        <span>03</span>
+
+        <h3>
+          Perception
+        </h3>
+
+        <p>
+          What is the market likely to understand
+          about your professional proposition?
+        </p>
+
+      </article>
+
+
+      <article class="diagnostic-card">
+
+        <span>04</span>
+
+        <h3>
+          Access
+        </h3>
+
+        <p>
+          What level of access do you currently
+          have to relevant opportunities and networks?
+        </p>
+
+      </article>
+
+
+      <article class="diagnostic-card">
+
+        <span>05</span>
+
+        <h3>
+          Transferability
+        </h3>
+
+        <p>
+          How effectively can your capabilities
+          travel across roles, functions or markets?
+        </p>
+
+      </article>
+
+
+      <article class="diagnostic-card">
+
+        <span>06</span>
+
+        <h3>
+          Professional Equity
+        </h3>
+
+        <p>
+          What accumulated value does your experience
+          create in the current career market?
+        </p>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= DIAGNOSTIC FORM ================= -->
+
+<section class="section" id="diagnostic">
+
+  <div class="container diagnostic-form-container">
+
+    <div class="form-intro">
+
+      <p class="section-number">
+        STEP 01
+      </p>
+
+      <h2>
+        Begin with
+        your context.
+      </h2>
+
+      <p>
+        Tell us where you are today. Your responses
+        help establish the context for your market position.
+      </p>
+
+    </div>
+
+
+    <form
+      class="diagnostic-form"
+      onsubmit="return showDiagnosticResult(event)"
+    >
+
+      <!-- CAREER STAGE -->
+
+      <div class="form-group">
+
+        <label for="career-stage">
+          Career Stage
+        </label>
+
+        <select id="career-stage" required>
+
+          <option value="">
+            Select your career stage
+          </option>
+
+          <option>
+            Early Career
+          </option>
+
+          <option>
+            Mid Career
+          </option>
+
+          <option>
+            Senior Professional
+          </option>
+
+          <option>
+            Executive / Leadership
+          </option>
+
+          <option>
+            Career Transition
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <!-- INDUSTRY -->
+
+      <div class="form-group">
+
+        <label for="industry">
+          Industry
+        </label>
+
+        <input
+          type="text"
+          id="industry"
+          placeholder="e.g. Technology, Banking, Consulting"
+          required
+        >
+
+      </div>
+
+
+      <!-- FUNCTION -->
+
+      <div class="form-group">
+
+        <label for="function">
+          Function
+        </label>
+
+        <input
+          type="text"
+          id="function"
+          placeholder="e.g. Marketing, HR, Finance"
+          required
+        >
+
+      </div>
+
+
+      <!-- LEADERSHIP -->
+
+      <div class="form-group">
+
+        <label for="leadership">
+          Leadership Level
+        </label>
+
+        <select id="leadership" required>
+
+          <option value="">
+            Select your level
+          </option>
+
+          <option>
+            Individual Contributor
+          </option>
+
+          <option>
+            Manager
+          </option>
+
+          <option>
+            Senior Manager
+          </option>
+
+          <option>
+            Director
+          </option>
+
+          <option>
+            Executive
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <!-- EXPERIENCE -->
+
+      <div class="form-group">
+
+        <label for="experience">
+          Years of Experience
+        </label>
+
+        <select id="experience" required>
+
+          <option value="">
+            Select
+          </option>
+
+          <option>
+            0–3 years
+          </option>
+
+          <option>
+            4–7 years
+          </option>
+
+          <option>
+            8–12 years
+          </option>
+
+          <option>
+            13–20 years
+          </option>
+
+          <option>
+            20+ years
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <!-- NEXT MOVE -->
+
+      <div class="form-group">
+
+        <label for="next-move">
+          Desired Next Move
+        </label>
+
+        <select id="next-move" required>
+
+          <option value="">
+            Select your objective
+          </option>
+
+          <option>
+            Promotion
+          </option>
+
+          <option>
+            New Organisation
+          </option>
+
+          <option>
+            Leadership Role
+          </option>
+
+          <option>
+            Career Transition
+          </option>
+
+          <option>
+            International Opportunity
+          </option>
+
+          <option>
+            Entrepreneurship
+          </option>
+
+        </select>
+
+      </div>
+
+
+      <!-- MARKET QUESTIONS -->
+
+      <div class="form-divider">
+
+        <p class="section-number">
+          STEP 02
+        </p>
+
+        <h3>
+          How does the market
+          currently see you?
+        </h3>
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label>
+          How clearly can you explain the value
+          you bring to your target market?
+        </label>
+
+        <div class="radio-group">
+
+          <label>
+            <input type="radio" name="positioning" required>
+            Very clearly
+          </label>
+
+          <label>
+            <input type="radio" name="positioning">
+            Somewhat clearly
+          </label>
+
+          <label>
+            <input type="radio" name="positioning">
+            Not clearly
+          </label>
+
+        </div>
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label>
+          How visible are you outside your immediate organisation?
+        </label>
+
+        <div class="radio-group">
+
+          <label>
+            <input type="radio" name="visibility" required>
+            Highly visible
+          </label>
+
+          <label>
+            <input type="radio" name="visibility">
+            Moderately visible
+          </label>
+
+          <label>
+            <input type="radio" name="visibility">
+            Limited visibility
+          </label>
+
+        </div>
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label>
+          How strong is your access to relevant
+          professional networks?
+        </label>
+
+        <div class="radio-group">
+
+          <label>
+            <input type="radio" name="access" required>
+            Strong
+          </label>
+
+          <label>
+            <input type="radio" name="access">
+            Developing
+          </label>
+
+          <label>
+            <input type="radio" name="access">
+            Limited
+          </label>
+
+        </div>
+
+      </div>
+
+
+      <!-- CONTACT -->
+
+      <div class="form-divider">
+
+        <p class="section-number">
+          FINAL STEP
+        </p>
+
+        <h3>
+          Where should we send
+          your diagnostic insight?
+        </h3>
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="name">
+          Name
+        </label>
+
+        <input
+          type="text"
+          id="name"
+          placeholder="Your name"
+          required
+        >
+
+      </div>
+
+
+      <div class="form-group">
+
+        <label for="email">
+          Email
+        </label>
+
+        <input
+          type="email"
+          id="email"
+          placeholder="you@example.com"
+          required
+        >
+
+      </div>
+
+
+      <p class="privacy-note">
+        Your information is intended for the purpose of
+        understanding your career-market position and
+        will be treated confidentially.
+      </p>
+
+
+      <button
+        type="submit"
+        class="button button-gold form-submit"
+      >
+        View Diagnostic Insight →
+      </button>
+
+    </form>
+
+
+    <!-- RESULT -->
+
+    <div
+      id="diagnostic-result"
+      class="diagnostic-result"
+      style="display:none;"
+    >
+
+      <p class="section-number">
+        YOUR INITIAL INSIGHT
+      </p>
+
+      <h2>
+        Your career-market
+        position deserves a closer look.
+      </h2>
+
+      <p>
+        The information you provided is only the
+        beginning of the diagnostic process.
+      </p>
+
+      <p>
+        A meaningful assessment looks beyond a single
+        score to identify the dominant constraint affecting
+        your positioning, visibility, access and opportunity.
+      </p>
+
+      <a
+        href="solutions.html"
+        class="button button-gold"
+      >
+        Explore OPPARC Solutions →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= DARK CTA ================= -->
+
+<section class="final-cta">
+
+  <div class="container">
+
+    <p class="section-number">
+      BEYOND THE DIAGNOSTIC
+    </p>
+
+    <h2>
+      Don't simply make
+      another career move.
+    </h2>
+
+    <p>
+      Architect the market position
+      that makes the next move possible.
+    </p>
+
+    <a
+      href="architecture.html"
+      class="button button-gold"
+    >
+      Explore The OPPARC Architecture →
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+  <div class="container">
+
+    <div class="footer-top">
+
+      <div>
+
+        <div class="logo">
+          OPPARC<sup>®</sup>
+        </div>
+
+        <p>
+          Architecting Opportunities.<br>
+          Transforming Leadership.
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <div>
+
+          <a href="index.html">Home</a>
+          <a href="architecture.html">Architecture</a>
+          <a href="diagnostic.html">Diagnostic</a>
+          <a href="solutions.html">Solutions</a>
+
+        </div>
+
+        <div>
+
+          <a href="architect.html">The Architect</a>
+          <a href="proof.html">Proof of Impact</a>
+          <a href="opportunity-lab.html">
+            Opportunity Lab
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <span>
+        © OPPARC. All rights reserved.
+      </span>
+
+      <span>
+        Architecting Opportunities. Transforming Leadership.
+      </span>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+<!-- ================= SIMPLE FORM SCRIPT ================= -->
+
+<script>
+
+function showDiagnosticResult(event) {
+
+  event.preventDefault();
+
+  const form = document.querySelector(".diagnostic-form");
+  const result = document.getElementById("diagnostic-result");
+
+  form.style.display = "none";
+  result.style.display = "block";
+
+  result.scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+
+  return false;
+}
+
+</script>
+
+</body>
+  </html>
