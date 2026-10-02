@@ -1349,3 +1349,30 @@ footer {
   }
 
 }
+/* FINAL OPPARC LOADER FIX */
+
+.opparc-loader {
+  animation: opparcLoaderAutoHide 4s ease forwards !important;
+}
+
+@keyframes opparcLoaderAutoHide {
+
+  0% {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  70% {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+
+  100% {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+}
