@@ -1660,3 +1660,287 @@ svg {
   }
 
   }
+/* ===============================
+   OPPARC MOBILE & PACE FIX
+   =============================== */
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+video,
+svg {
+  max-width: 100%;
+}
+
+/* PACE desktop */
+.pace-box {
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+}
+
+.pace-box > div {
+  min-width: 0;
+}
+
+.pace-box p {
+  max-width: 520px;
+}
+
+
+/* ===============================
+   MOBILE
+   =============================== */
+
+@media (max-width: 600px) {
+
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    width: calc(100% - 36px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-grid,
+  .two-column,
+  .intro-row,
+  .diagnostic-header,
+  .architect-layout,
+  .lab-header,
+  .organization-box {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* ---------- HEADINGS ---------- */
+
+  h1 {
+    font-size: clamp(40px, 11vw, 55px);
+    line-height: 1;
+    overflow-wrap: normal;
+  }
+
+  h2 {
+    font-size: clamp(36px, 10vw, 48px);
+    line-height: 1.05;
+  }
+
+
+  /* ---------- PACE FIX ---------- */
+
+  .pace-box {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+
+    padding: 32px 24px;
+
+    overflow: hidden;
+  }
+
+  .pace-box > div {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .pace-box h3 {
+    font-size: clamp(30px, 9vw, 42px);
+    line-height: 1.08;
+    margin-top: 18px;
+  }
+
+  .pace-box p {
+    width: 100%;
+    max-width: none;
+
+    font-size: 15px;
+    line-height: 1.7;
+
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+
+  /* ---------- ARCHITECTURE ---------- */
+
+  .movement-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .movement {
+    min-height: auto;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: 30px 20px;
+  }
+
+  .movement h3 {
+    margin: 22px 0 12px;
+    font-size: 30px;
+  }
+
+
+  /* ---------- EQUATION ---------- */
+
+  .equation {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .equation-line {
+    display: none;
+  }
+
+  .equation-item {
+    padding: 22px 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+
+  /* ---------- DIAGNOSTIC ---------- */
+
+  .diagnostic-card {
+    width: 100%;
+    padding: 22px;
+  }
+
+  .diagnostic-card h3 {
+    font-size: 27px;
+    line-height: 1.2;
+  }
+
+  .answers button {
+    width: 100%;
+    min-height: 55px;
+  }
+
+
+  /* ---------- SOLUTIONS ---------- */
+
+  .solutions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .solution-card {
+    min-height: auto;
+    padding: 38px 20px;
+  }
+
+  .solution-card:nth-child(odd) {
+    border-right: none;
+  }
+
+  .solution-card h3 {
+    font-size: 30px;
+    line-height: 1.1;
+    margin: 32px 0 14px;
+  }
+
+
+  /* ---------- ORGANISATIONS ---------- */
+
+  .organization-box {
+    padding: 32px 22px;
+  }
+
+  .organization-box h3 {
+    font-size: 30px;
+  }
+
+  .org-services {
+    grid-template-columns: 1fr;
+  }
+
+
+  /* ---------- ARCHITECT ---------- */
+
+  .architect-layout {
+    gap: 35px;
+  }
+
+  .portrait-placeholder {
+    height: 420px;
+  }
+
+
+  /* ---------- PROOF ---------- */
+
+  .evidence-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .evidence {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    min-height: auto;
+  }
+
+
+  /* ---------- OPPORTUNITY LAB ---------- */
+
+  .lab-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lab-grid article {
+    border-right: none;
+    min-height: auto;
+  }
+
+
+  /* ---------- BUTTONS ---------- */
+
+  .button {
+    width: 100%;
+  }
+
+  .final-buttons {
+    flex-direction: column;
+  }
+
+
+  /* ---------- FOOTER ---------- */
+
+  .footer-links {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* Small phones */
+@media (max-width: 390px) {
+
+  .container {
+    width: calc(100% - 30px);
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .pace-box {
+    padding: 28px 20px;
+  }
+
+  .pace-box h3 {
+    font-size: 30px;
+  }
+
+}
